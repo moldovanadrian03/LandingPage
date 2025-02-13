@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+$primary-color: #2A5B96;
+$secondary-color: #3B8292;
+$thernary-color: #F5C09E;
+$border-color: #101324;
+$hover-primary: #000000;
+$hover-secondary: #ffffff;
+
+// Optional: Define other theme colors
+$background-color: #FAFCFC;
+$text-color: #101324;
+
+// Use CSS variables (optional)
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --border-color: #{$border-color};
+}
+
+button {
+  margin: 10px 0px;
+  height: auto;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 10px 20px;
+  border: 2px solid $border-color;
+}
+
+button.primary {
+  background-color: $text-color;
+  color: $background-color;
+}
+
+button.secondary {
+  background-color: $background-color;
+  color: $text-color;
+  margin-left: 10px;
+}
+
+button.primary:hover {
+  background-color: $hover-primary;
+}
+
+button.secondary:hover {
+  background-color: $hover-secondary;
+}
