@@ -1,0 +1,36 @@
+.container {
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+
+    .image {
+      max-width: 95%;
+    }
+  }
+  .info-container {
+    grid-column: 1;
+    padding: 10px 30px;
+  }
+
+  .image-container {
+    grid-column: 2;
+    padding: 20px 30px;
+
+    text-align: center;
+
+    .image {
+      width: 100%;
+      height: auto;
+
+      object-fit: cover;
+      aspect-ratio: 1;
+    }
+  }
+}
