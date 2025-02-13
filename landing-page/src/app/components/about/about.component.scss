@@ -7,16 +7,24 @@
   align-items: center;
 
   @media (max-width: 768px) {
+    height: auto;
+
     display: flex;
     flex-direction: column;
 
-    .image {
-      max-width: 95%;
-    }
   }
   .info-container {
     grid-column: 1;
     padding: 10px 30px;
+
+    @media (max-width: 768px) {
+      padding: 10px 10px;
+    }
+
+    .buttons-container {
+      display: flex;
+      align-items: flex-start;
+    }
   }
 
   .image-container {
@@ -24,6 +32,10 @@
     padding: 20px 30px;
 
     text-align: center;
+
+    @media (max-width: 768px) {
+      padding: 10px 10px;
+    }
 
     .image {
       width: 100%;
