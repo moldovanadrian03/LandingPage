@@ -36,6 +36,13 @@ export class NavbarComponent {
     this.isMobileView = event.target.innerWidth <= 768;
   }
 
+  isMobile() {
+    if (this.isBrowser()) {     // not checking for browser will throw 'window is not defined' errors in console
+      return window.innerWidth <= 768;
+    }
+    return true;
+  }
+
   toggleSidenav() {
     this.isSidenavOpened = !this.isSidenavOpened;
   }

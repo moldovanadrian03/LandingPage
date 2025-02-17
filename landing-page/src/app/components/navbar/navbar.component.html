@@ -34,8 +34,8 @@
     </ul>
   </section>
 
-  <div class="backdrop" (click)="toggleSidenav()" *ngIf="isMobileView"></div>
-  <section class="sidenav-container">
+  <div class="backdrop" (click)="toggleSidenav()" *ngIf="isSidenavOpened && isMobileView"></div>
+  <section class="sidenav-container" *ngIf="isSidenavOpened">
     <ul>
       <li (click)="scrollTo('peoples-opinion')" (click)="toggleSidenav()">
         Parerea oamenilor
