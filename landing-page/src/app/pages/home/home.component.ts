@@ -5,6 +5,7 @@ import { FeaturesComponent } from '../../components/features/features.component'
 import { MapComponent } from '../../components/map/map.component';
 import { CommunityComponent } from "../../components/community/community.component";
 import { NavbarComponent } from "../../components/navbar/navbar.component";
+import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,8 @@ import { NavbarComponent } from "../../components/navbar/navbar.component";
     FeaturesComponent,
     MapComponent,
     CommunityComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

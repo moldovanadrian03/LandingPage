@@ -28,7 +28,7 @@ $text-color: #101324;
 
 button {
   margin: 10px 0px;
-  height: auto;
+  height: 40px;
   cursor: pointer;
   font-size: 12px;
   padding: 10px 20px;
@@ -91,5 +91,34 @@ li {
 
   &:hover {
     color: $primary-color;
+  }
+}
+
+input {
+  height: 40px;
+  background: none;
+  width: 60%;
+  outline: none;
+  border: 1px solid $text-color;
+  caret-color: $secondary-color;
+  color: $secondary-color;
+  padding-left: 10px;
+}
+
+input::placeholder {
+  color: #CCC;
+}
+
+.error {
+  margin: 0;
+  padding: 5px 0;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  color: red;
+
+  @media (max-width: 425px) {
+    font-size: 12px;
   }
 }
