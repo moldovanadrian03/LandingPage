@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -23,12 +23,17 @@ import { NgIf } from '@angular/common';
 })
 export class NavbarComponent {
   isSidenavOpened: boolean = false;
+  isMobileView: boolean = false;
 
-  isMobile() {
-    if (this.isBrowser()) {     // not checking for browser will throw 'window is not defined' errors in console
-      return window.innerWidth <= 800;
+  constructor() {
+    if(this.isBrowser()) {
+      this.onResize({ target: window });
     }
-    return true;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.isMobileView = event.target.innerWidth <= 768;
   }
 
   toggleSidenav() {

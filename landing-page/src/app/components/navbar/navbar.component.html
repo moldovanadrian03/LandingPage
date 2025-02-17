@@ -6,19 +6,18 @@
       alt="logo"
       (click)="scrollTo('about')"
     />
-
     <button
       aria-label="Toggle sidenav"
       mat-icon-button
       (click)="toggleSidenav()"
       class="sidenav-button"
-      *ngIf="isMobile()"
+      *ngIf="isMobileView"
     >
       <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
-  </section>
 
-  <section class="navbar-row2" *ngIf="!isMobile()">
+  </section>
+  <section class="navbar-row2" *ngIf="!isMobileView">
     <ul>
       <li (click)="scrollTo('peoples-opinion')">
         Parerea oamenilor
@@ -35,9 +34,7 @@
     </ul>
   </section>
 
-
-  @if(isSidenavOpened && isMobile()) {
-  <div class="backdrop" (click)="toggleSidenav()"></div>
+  <div class="backdrop" (click)="toggleSidenav()" *ngIf="isMobileView"></div>
   <section class="sidenav-container">
     <ul>
       <li (click)="scrollTo('peoples-opinion')" (click)="toggleSidenav()">
@@ -54,5 +51,4 @@
       </li>
     </ul>
   </section>
-}
 </div>
