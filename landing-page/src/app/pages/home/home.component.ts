@@ -4,6 +4,7 @@ import { PeopleOpinionComponent } from '../../components/people-opinion/people-o
 import { FeaturesComponent } from '../../components/features/features.component';
 import { MapComponent } from '../../components/map/map.component';
 import { CommunityComponent } from "../../components/community/community.component";
+import { NavbarComponent } from "../../components/navbar/navbar.component";
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,8 @@ import { CommunityComponent } from "../../components/community/community.compone
     PeopleOpinionComponent,
     FeaturesComponent,
     MapComponent,
-    CommunityComponent
+    CommunityComponent,
+    NavbarComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
