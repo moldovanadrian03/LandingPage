@@ -23,7 +23,6 @@
     background-image: url('/assets/pattern.jpg'); /* Place the image inside /src/assets/ */
     background-size: cover;
     background-position: center;
-    opacity: 0.85;
 
     .title, .description {
       color: white;
@@ -33,6 +32,18 @@
     @media (max-width: 768px) {
       padding: 10px 10px;
     }
+
+    .form-container {
+      width: 50%;
+      background-color: transparent;
+
+      form {
+        background-color: transparent;
+      }
+    }
   }
 
+}
+input {
+  color: white;
 }
