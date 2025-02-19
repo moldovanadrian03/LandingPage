@@ -17,6 +17,6 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ARTASTRADALA_353F0 }}
           channelId: live
           projectId: artastradala-353f0
-          entryPoint: landing-page/dist/landing-page
+          entryPoint: ./landing-page
       - run: npm run build
 
