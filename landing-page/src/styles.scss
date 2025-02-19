@@ -26,6 +26,16 @@ $text-color: #101324;
 
 }
 
+.container {
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  }
+}
+
+.title, .description, .sub-title {
+  padding: 5px 0;
+}
+
 button {
   margin: 10px 0px;
   height: 40px;
