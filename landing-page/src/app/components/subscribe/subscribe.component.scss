@@ -37,6 +37,10 @@
       width: 50%;
       background-color: transparent;
 
+      @media (max-width: 425px) {
+        width: 100%;
+      }
+
       form {
         background-color: transparent;
       }
