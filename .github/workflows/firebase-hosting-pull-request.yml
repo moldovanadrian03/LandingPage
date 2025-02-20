@@ -13,7 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm run build
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./landing-page
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+        working-directory: ./landing-page
+      - name: Build project
+        run: npm run build
         working-directory: ./landing-page
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
