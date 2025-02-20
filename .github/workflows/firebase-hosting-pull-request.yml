@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./landing-page
       - name: Install Angular CLI
         run: npm install -g @angular/cli
-        working-directory: ./landing-page
-      - name: Install Angular build dependencies
-        run: npm install -g @angular-devkit/build-angular
         working-directory: ./landing-page
       - name: Build project
         run: npm run build
